@@ -1,4 +1,5 @@
 /***** Challenge 2 *****/
+
 let set, size, id;
 let posUpdates = [];
 let positions = [];
@@ -20,10 +21,10 @@ const main = (N, M, T) => {
   };
 
   function isNextMoveValid(val, index) {
-    if (set[index + 1] == 0)
+    if (set[index + 1] == 0) 
       return set[index];
-    else if (set[index + 1] == undefined)
-      if (set[0] == 0)
+    else if (set[index + 1] == undefined) 
+      if (set[0] == 0) 
         return set[size];
   }
 
@@ -44,7 +45,8 @@ const main = (N, M, T) => {
     for (i = 0; i < T; i++) {
       for (const [index, value] of set.entries()) {
         if (value) {
-          if (isNextMoveValid(value, index)) movables.push(value);
+          if (isNextMoveValid(value, index)) 
+            movables.push(value);
         }
       }
 
@@ -81,7 +83,7 @@ const main = (N, M, T) => {
 
 main(25, 10, 50);
 
-const sum = positions.reduce(function (sum, value) {
+const sum = positions.reduce(function(sum, value) {
   return sum + value;
 }, 0);
 
