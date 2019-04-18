@@ -20,8 +20,11 @@ const main = (N, M, T) => {
   };
 
   function isNextMoveValid(val, index) {
-    if (set[index + 1] == 0) return set[index];
-    else if (set[index + 1] == undefined) if (set[0] == 0) return set[size];
+    if (set[index + 1] == 0)
+      return set[index];
+    else if (set[index + 1] == undefined)
+      if (set[0] == 0)
+        return set[size];
   }
 
   function getRandomIntInclusive(min, max) {
@@ -78,7 +81,7 @@ const main = (N, M, T) => {
 
 main(25, 10, 50);
 
-const sum = positions.reduce(function(sum, value) {
+const sum = positions.reduce(function (sum, value) {
   return sum + value;
 }, 0);
 
